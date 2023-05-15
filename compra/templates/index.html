@@ -16,19 +16,19 @@
         <div class="row">
             <nav class="navbar d-flex flex-row-reverse navbar-dark bg-dark">
                 <div>
-                    <a class="btn btn-light p-2" href="/productos/">Ver Proveedores</a>
-                    <a class="btn btn-light p-2" href="/productos/">Ver Productos</a>
+                    <a class="btn btn-light p-2" href="{% url 'productos' %}">Ver Proveedores</a>
+                    <a class="btn btn-light p-2" href="{% url 'productos' %}">Ver Productos</a>
                     <a class="btn btn-primary p-2" href="/admin/">Admin Control</a>
                 </div>
-                <a class="navbar-brand p-2" href="/productos/">Stock Control</a>
+                <a class="navbar-brand p-2" href="{% url 'productos' %}">Stock Control</a>
             </nav>
         </div>
             
         <div class="row p-4">
             <div class="container-fluid">
                 <div class="mb-2 ">
-                    <a class="btn btn-success" href="/producto/nuevo">Nuevo Producto</a>
-                    <a class="btn btn-success" href="/proveedor/nuevo">Nuevo Proveedor</a>
+                    <a class="btn btn-success" href="{% url 'nuevo_producto' %}">Nuevo Producto</a>
+                    <a class="btn btn-success" href="{% url 'nuevo_proveedor' %}">Nuevo Proveedor</a>
                 </div>
                 <table class="table">
                     <thead class="table-dark">
