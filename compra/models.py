@@ -15,6 +15,9 @@ class Proveedor(models.Model):
     nombre = models.CharField(max_length=50)
     apellido = models.CharField(max_length=50)
     dni = models.IntegerField()
+    
+    def __str__(self) -> str:
+        return f"{self.nombre} {self.apellido}"
 
 class Producto(models.Model):
     """
@@ -35,3 +38,6 @@ class Producto(models.Model):
         related_name="productos",
         on_delete=models.CASCADE,
     )
+    
+    def __str__(self) -> str:
+        return self.nombre
