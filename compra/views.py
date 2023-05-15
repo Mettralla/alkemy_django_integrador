@@ -4,7 +4,9 @@ from .forms import ProveedorForm, ProductoForm
 
 # Create your views here.
 def index(request):
-    return render(request, 'index.html')
+    return render(request, 'index.html', {
+        "productos": Producto.objects.all()
+    })
 
 def new_proveedor(request):
     if request.method == 'POST':
@@ -14,7 +16,7 @@ def new_proveedor(request):
             return redirect('productos')
     else:
         form = ProveedorForm()
-    return render(request, 'new_proveedor.html', {'form': form})
+    return render(request, 'new_proveedor.html', { 'form': form })
 
 def new_producto(request):
     if request.method == 'POST':
