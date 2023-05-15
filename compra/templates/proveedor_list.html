@@ -10,7 +10,7 @@
     {% bootstrap_javascript %}
 </head>
 <body>
-    <div class="container-fluid">
+    <div class="container-fluid grid ">
         <div class="row">
             <nav class="navbar d-flex flex-row-reverse navbar-dark bg-dark">
                 <div>
@@ -33,19 +33,17 @@
                         <tr>
                             <th>ID</th>
                             <th>Nombre</th>
-                            <th>Precio</th>
-                            <th>Stock</th>
-                            <th>Proveedor</th>
+                            <th>Apellido</th>
+                            <th>DNI</th>
                         </tr>
                     </thead>
                     <tbody>
-                        {% for producto in productos %}
+                        {% for proveedor in proveedores %}
                         <tr>
-                            <td>{{ producto.id }}</td>
-                            <td>{{ producto.nombre }}</td>
-                            <td>{{ producto.precio }}</td>
-                            <td>{{ producto.stock_actual }}</td>
-                            <td>{{ producto.proveedor }}</td>
+                            <td>{{ proveedor.id }}</td>
+                            <td>{{ proveedor.nombre }}</td>
+                            <td>{{ proveedor.apellido }}</td>
+                            <td>{{ proveedor.dni }}</td>
                         </tr>
                         {% endfor %}
                     </tbody>
